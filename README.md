@@ -12,18 +12,18 @@ buffer - server reads characters from socket connections to this buffer
 
 socketaddr_in - structure containing an internet address
 
-struct sockaddr_in
-{
+    struct sockaddr_in
+    {
 
-    short   sin_family; /* must be AF_INET */
+        short   sin_family; /* must be AF_INET */
   
-    u_short sin_port;
+        u_short sin_port;
   
-    struct  in_addr sin_addr;
+        struct  in_addr sin_addr;
   
-    char    sin_zero[8]; /* Not used, must be zero */
+        char    sin_zero[8]; /* Not used, must be zero */
   
-};
+    };
 
 serv_addr - address of server
 cli_addr - address of client which connects to server
