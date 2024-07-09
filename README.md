@@ -26,18 +26,29 @@ socketaddr_in - structure containing an internet address
     };
 
 serv_addr - address of server
+
 cli_addr - address of client which connects to server
 
+
 socket() - creates a new socket, it takes 3 arguements
+
 --> address domain of the socket, AF_UNIX OR AF_INET and many others
+
 --> Type of socket, SOCK_STREAM(TCP) or SOCK_DGRAM(UDP)
+
 --> protocol - If this argument is zero, the OS will choose the most appropriate protocol,TCP for stream sockets and UDP for datagram sockets.
+
 The socket system call returns an entry in file descriptor table, If the socket call fails, it returns -1.
 
-bzero() - sets all value in a buffer to zero, it takes 2 arguements 
+
+bzero() - sets all value in a buffer to zero, it takes 2 arguements  
+
 --> pointer to the buffer
+
 --> size of the buffer
+
 here, it initializes serv_addr to zero
+
 
 short sin_family, which contains a code for the address family. It should always be set to the symbolic constant AF_INET.
 unsigned short sin_port, which contain the port number. htons() converts a port number in host byte order to a port number in network byte order.
