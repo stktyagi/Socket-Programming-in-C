@@ -11,12 +11,18 @@ n - number of characters read or written
 buffer - server reads characters from socket connections to this buffer
 
 socketaddr_in - structure containing an internet address
+
 struct sockaddr_in
 {
+
   short   sin_family; /* must be AF_INET */
+  
   u_short sin_port;
+  
   struct  in_addr sin_addr;
+  
   char    sin_zero[8]; /* Not used, must be zero */
+  
 };
 
 serv_addr - address of server
