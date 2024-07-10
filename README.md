@@ -123,3 +123,9 @@ accept() - block until a client connects to a server, takes 2 arguements
     ./server 8080 
 
 choose any other port if you want.
+if you want to test using client executable
+
+    gcc -o client client.c
+    ./client 127.0.0.1 8080
+    GET / HTTP/1.1
+
