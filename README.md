@@ -97,3 +97,19 @@ accept() - block until a client connects to a server, takes 2 arguements
 --> the new file descriptor, the one returned by accept()
 
 -->  the total number of characters it will read in the socket 
+
+
+
+
+
+# client.c
+
+    struct  hostent
+    {
+      char    *h_name;        /* official name of host */
+      char    **h_aliases;    /* alias list */
+      int     h_addrtype;     /* host address type */
+      int     h_length;       /* length of address */
+      char    **h_addr_list;  /* list of addresses from name server */
+      #define h_addr  h_addr_list[0]  /* address, for backward compatiblity */
+    };
