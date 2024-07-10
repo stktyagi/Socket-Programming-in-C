@@ -1,4 +1,6 @@
-# server.c
+# Single-Threaded basic HTTP Server over TCP
+
+## server.c
 
 error() - called whena system call fails
 
@@ -102,7 +104,7 @@ accept() - block until a client connects to a server, takes 2 arguements
 
 
 
-# client.c
+## client.c
 
     struct  hostent
     {
@@ -115,7 +117,7 @@ accept() - block until a client connects to a server, takes 2 arguements
     };
 
 
-# Usage
+## Usage
 
     gcc -o server server.c
     ./server 8080 
