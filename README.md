@@ -113,3 +113,11 @@ accept() - block until a client connects to a server, takes 2 arguements
       char    **h_addr_list;  /* list of addresses from name server */
       #define h_addr  h_addr_list[0]  /* address, for backward compatiblity */
     };
+
+
+# Usage
+
+    gcc -o server server.c
+    ./server 8080 
+
+choose any other port if you want.
