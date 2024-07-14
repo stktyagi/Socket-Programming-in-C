@@ -31,7 +31,13 @@ void parse_request(char *buffer, struct http_request *req) {
 
 void handle_route(int sockfd, struct http_request *req) {
     if (strcmp(req->path, "/") == 0) {
-        send_response(sockfd, "200 OK", "text/html", "<html><body><h1>Home Page</h1></body></html>");
+        send_response(sockfd, "200 OK", "text/html", 
+    "<html><body>"
+    "<h1>Related resources I used:</h1>"
+    "<a href='https://www.linuxhowtos.org/C_C++/socket.htm'>LinuxHowTos</a><br>"
+    "<a href='https://youtu.be/gnvDPCXktWQ?si=HiO1_CJPYCXq6gAV'>YT</a><br>"
+    "<a href='https://github.com/stktyagi/Socket-Programming-in-C/blob/main/README.md'>README</a>"
+    "</body></html>");
     } else if (strcmp(req->path, "/about") == 0) {
         send_response(sockfd, "200 OK", "text/html", "<html><body><h1>About Page</h1></body></html>");
     } else {
@@ -88,6 +94,7 @@ int main(int argc, char *argv[]) {
     
     close(newsockfd);
 }
+    
     close(sockfd);
     return 0;
 }
